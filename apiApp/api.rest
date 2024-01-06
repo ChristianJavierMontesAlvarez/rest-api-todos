@@ -1,0 +1,14 @@
+### 1 TYPE GET TODOS
+GET http://localhost:3004/todos
+
+### 2 TYPE GET TODO
+GET http://localhost:3004/todos/1
+
+### 1 TYPE POST TODOS (Create a new todo)
+POST http://localhost:3004/todos
+Content-Type: application/json
+
+{
+  "content": "mi nuevo todo",
+  "done": false
+}

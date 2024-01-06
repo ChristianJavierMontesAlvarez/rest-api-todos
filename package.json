@@ -1,0 +1,32 @@
+{
+  "name": "backend-app",
+  "version": "1.0.0",
+  "description": "backend end app dev",
+  "main": "index.js",
+  "scripts": {
+    "start:1": "nodemon index.js",
+    "start:2": "nodemon routing.js",
+    "start:3": "nodemon expressApi.js",
+    "start:4": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dev",
+    "backend",
+    "christDev"
+  ],
+  "author": "christDev",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "4.18.2",
+    "zod": "3.22.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "standard": "^17.1.0"
+  },
+  "eslintConfig": {
+    "extends": "standard"
+  }
+}
