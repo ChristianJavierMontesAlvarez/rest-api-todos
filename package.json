@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "backend end app dev",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start:1": "nodemon index.js",
-    "start:2": "nodemon routing.js",
-    "start:3": "nodemon expressApi.js",
-    "start:4": "nodemon app.js",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

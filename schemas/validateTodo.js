@@ -1,4 +1,4 @@
-const z = require('zod');
+import z from 'zod';
 
 const todoSchema = z.object({
   content: z.string({
@@ -11,15 +11,10 @@ const todoSchema = z.object({
   })
 })
 
-const validateTodo = (obj) => {
+export const validateTodo = (obj) => {
   return todoSchema.safeParse(obj);
 }
 
 const validatePartialTodo = (obj) => {
   return todoSchema.partial().safeParse(obj);
-}
-
-module.exports = {
-  validateTodo,
-  validatePartialTodo,
 }

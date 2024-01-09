@@ -1,6 +1,6 @@
-const crypto = require('node:crypto');
+import { randomUUID } from 'node:crypto';
 const generateId = () => {
-  return crypto.randomUUID();
+  return randomUUID();
 }
 
 const todos = [
@@ -9,6 +9,6 @@ const todos = [
   {id: generateId(), content: 'comprar leche', done: false},
 ]
 
-module.exports = {
+export {
   todos
-}
+};
