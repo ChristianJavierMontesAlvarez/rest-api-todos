@@ -24,7 +24,7 @@ class TodoController {
     if (result.error) {
       res.status(422).json({ errorMessage: result.error.message});
     }
-    const newTodo = await TodoModel.create({ data: req.body });
+    const newTodo = await TodoModel.create(result);
 
     //EXAMPLE WITHOUT DB, AFTER WITH DB
     res.status(201).json(newTodo);
