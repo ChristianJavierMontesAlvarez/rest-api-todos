@@ -23,7 +23,7 @@ export class TodoModel {
         ...input,
       }
 
-      todos = todos.push(newTodo);
+      todos = todos.concat(newTodo);
       return newTodo;
   }
 
