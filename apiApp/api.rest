@@ -2,7 +2,7 @@
 GET http://localhost:3004/todos
 
 ### 2 TYPE GET TODO
-GET http://localhost:3004/todos/1
+GET http://localhost:3004/todos/e5331d6e-e8a1-4935-98f8-091dc0b8e6b5
 
 ### 1 TYPE POST TODOS (Create a new todo)
 POST http://localhost:3004/todos

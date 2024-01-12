@@ -8,7 +8,7 @@ export class TodoController {
   }
 
   static async getById(req, res) {
-    const id = Number(req.params.id);
+    const id = req.params.id;
     const result = await TodoModel.getById({ id });
 
     if (result.error) {
@@ -21,11 +21,13 @@ export class TodoController {
   static async create(req, res) {
     const result = validateTodo(req.body);
 
-    if (result.error) {
+    console.log(result);
+
+    if (!result.success) {
       res.status(422).json({ errorMessage: result.error.message});
     }
-    const newTodo = await TodoModel.create(result);
 
+    const newTodo = await TodoModel.create(result);
     //EXAMPLE WITHOUT DB, AFTER WITH DB
     res.status(201).json(newTodo);
   }

@@ -1,7 +1,6 @@
 import crypto from 'node:crypto'
 import { todos } from "../todos.js";
 
-
 export class TodoModel {
   static async getAll() {
     return todos;
@@ -18,9 +17,11 @@ export class TodoModel {
   }
 
   static async create(input) {
+      const { data } = input;
+
       const newTodo = {
         id: crypto.randomUUID(),
-        ...input,
+        ...data,
       }
 
       todos.push(newTodo);

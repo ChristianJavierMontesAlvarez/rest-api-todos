@@ -12,6 +12,7 @@ import { router } from './routes/todos.js'
 const require = createRequire(import.meta.url);
 const todos = require('./todos.js'); */
 const app = express();
+app.disable('x-powered-by');
 app.use(json()); //middleware for get => req.body parsed
 app.use(corsMiddleware());
 
