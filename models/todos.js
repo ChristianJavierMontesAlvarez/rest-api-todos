@@ -1,5 +1,5 @@
 import crypto from 'node:crypto';
-import { todos } from "../todos.js";
+import { generateId, todos } from "../todos.js";
 
 export class TodoModel {
   static async getAll() {
@@ -18,12 +18,12 @@ export class TodoModel {
 
   static async create(input) {
       const newTodo = {
-        id: crypto.randomUUID(),
+        id: generateId(),
         timestamp: new Date().toLocaleString(),
         ...input,
       }
 
-      todos = todos.concat(newTodo);
+      todos = todos.push(newTodo);
       return newTodo;
   }
 
