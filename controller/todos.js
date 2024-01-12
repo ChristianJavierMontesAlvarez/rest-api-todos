@@ -1,7 +1,7 @@
 import { TodoModel } from "../models/todos.js";
 import { validateTodo } from "../schemas/validateTodo.js";
 
-class TodoController {
+export class TodoController {
   static async getAll(req, res) {
     const data = await TodoModel.getAll();
     res.status(200).json(data);
@@ -19,7 +19,7 @@ class TodoController {
   }
 
   static async create(req, res) {
-    const result = validateTodo(data);
+    const result = validateTodo(req.body);
 
     if (result.error) {
       res.status(422).json({ errorMessage: result.error.message});
@@ -35,8 +35,4 @@ class TodoController {
     const result = await TodoModel.delete({ id });  //HERE CONNECTION TO DB => PENDING
     res.status(202).json(result);
   }
-}
-
-export {
-  TodoController,
 }
