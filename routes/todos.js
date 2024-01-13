@@ -7,3 +7,4 @@ router.get('/', TodoController.getAll);
 router.get('/:id', TodoController.getById);
 router.post('/', TodoController.create);
 router.delete('/', TodoController.delete);
+router.patch('/', TodoController.update);

@@ -13,11 +13,20 @@ Content-Type: application/json
   "done": false
 }
 
-###
+###METHOD DELETE REMOVE A TODO
 
 DELETE http://localhost:3004/todos
 Content-Type: application/json
 
 {
   "id": "18f09ae3-55fc-4474-9322-fc29872ea20b"
+}
+
+###METHOD PATCH CHANGE DONE PROPERTY VAL !CONTRARY
+
+PATCH http://localhost:3004/todos
+Content-Type: application/json
+
+{
+  "id": "84475a99-edc9-4f3c-b1de-6e1d4e0df15a"
 }

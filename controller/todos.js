@@ -37,4 +37,10 @@ export class TodoController {
     const result = await TodoModel.delete({ id });  //HERE CONNECTION TO DB => PENDING
     res.status(202).json(result);
   }
+
+  static async update(req, res) {
+    const id = req.body.id;
+    const result = await TodoModel.update({ id });
+    res.status(202).json(result);
+  }
 }
