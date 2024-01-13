@@ -1,5 +1,7 @@
 import crypto from 'node:crypto'
-import { todos } from "../todos.js";
+import { todosData } from "../todosData.js";
+
+let todos = [ ...todosData ]
 
 export class TodoModel {
   static async getAll() {
@@ -29,6 +31,7 @@ export class TodoModel {
   }
 
   static async delete({ id }) {
-    return todos.filter(todo => todo.id !== id);
+    todos = todos.filter(todo => todo.id !== id);
+    return todos;
   }
 }

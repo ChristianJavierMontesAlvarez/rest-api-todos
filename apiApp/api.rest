@@ -12,3 +12,12 @@ Content-Type: application/json
   "content": "mi nuevo todo",
   "done": false
 }
+
+###
+
+DELETE http://localhost:3004/todos
+Content-Type: application/json
+
+{
+  "id": "18f09ae3-55fc-4474-9322-fc29872ea20b"
+}

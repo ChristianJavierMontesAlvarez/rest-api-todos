@@ -4,7 +4,7 @@ export const generateId = () => {
   return randomUUID();
 }
 
-export let todos = [
+export const todosData = [
   {id: generateId(), content: 'comprar pan', done: true},
   {id: generateId(), content: 'comprar azucar', done: false},
   {id: generateId(), content: 'comprar leche', done: false},
